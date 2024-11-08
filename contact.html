@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+            text-align: right; /* محاذاة النص إلى اليمين */
+        }
+        header, footer {
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline; /* عرض العناصر في سطر */
+            margin-left: 15px; /* مسافة بين العناصر */
+        }
+        section {
+            margin: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        form {
+            margin-top: 10px;
+        }
+        label {
+            display: block; /* جعل كل تسمية تظهر في سطر جديد */
+            margin: 10px 0 5px; /* مسافة بين التسمية والمدخل */
+        }
+        input, textarea {
+            width: 100%; /* جعل المدخلات تأخذ عرض كامل */
+            padding: 8px;
+            margin-bottom: 10px; /* مسافة بين المدخلات */
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049; /* لون الزر عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اتصل بنا</h1>
+        <nav>
+            <ul>
+                <li><a href="الصفحةالاساسية.html">الرئيسية</a></li>
+                <li><a href="activities.html">الأنشطة</a></li>
+                <li><a href="gallery.html">المعرض</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="register.html">التسجيل</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>نموذج الاتصال</h2>
+            <form id="contactForm">
+                <label for="contactName">الاسم:</label>
+                <input type="text" id="contactName" required>
+
+                <label for="contactEmail">البريد الإلكتروني:</label>
+                <input type="email" id="contactEmail" required>
+
+                <label for="contactMessage">الرسالة:</label>
+                <textarea id="contactMessage" required></textarea>
+
+                <button type="submit">إرسال</button>
+            </form>
+            <div id="contactMessage"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 جماعة العلوم</p>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").onsubmit = function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            const name = document.getElementById("contactName").value;
+            const email = document.getElementById("contactEmail").value;
+            const message = document.getElementById("contactMessage").value;
+
+            // عرض رسالة تأكيد
+            document.getElementById("contactMessage").innerText = `شكرًا، ${name}! تم إرسال رسالتك بنجاح.`;
+            
+            // إعادة تعيين النموذج بعد الإرسال
+            document.getElementById("contactForm").reset();
+        };
+    </script>
+</body>
+</html>

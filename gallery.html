@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعرض</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+            text-align: right; /* محاذاة النص إلى اليمين */
+        }
+        header, footer {
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline; /* عرض العناصر في سطر */
+            margin-left: 15px; /* مسافة بين العناصر */
+        }
+        section {
+            margin: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        img {
+            display: block; /* عرض الصور في سطر جديد */
+            margin: 10px auto; /* مركز الصور */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>المعرض</h1>
+        <nav>
+            <ul>
+                <li><a href="الصفحةالاساسية.html">الرئيسية</a></li>
+                
+                <li><a href="activities.html">الأنشطة</a></li>
+                <li><a href="gallery.html">المعرض</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="register.html">التسجيل</a></li>
+                <li><a href="login.html">تسجيل الدخول</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>صور من الأنشطة</h2>
+            <p>هنا بعض الصور من الأنشطة التي قمنا بتنظيمها:</p>
+            <img src="images.jpeg" alt="نشاط 1" style="width: 100%; max-width: 300px;">
+            <img src="download.jpeg" alt="نشاط 2" style="width: 100%; max-width: 300px;;">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 جماعة العلوم</p>
+    </footer>
+</body>
+</html>

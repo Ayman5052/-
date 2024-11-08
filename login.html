@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            direction: rtl; /* اتجاه النص من اليمين إلى اليسار */
+            text-align: right; /* محاذاة النص إلى اليمين */
+        }
+        header, footer {
+            text-align: center;
+        }
+        form {
+            margin: 20px;
+        }
+        label {
+            display: block; /* جعل كل تسمية تظهر في سطر جديد */
+            margin: 10px 0 5px; /* مسافة بين التسمية والمدخل */
+        }
+        input {
+            width: 100%; /* جعل المدخلات تأخذ عرض كامل */
+            padding: 8px;
+            margin-bottom: 10px; /* مسافة بين المدخلات */
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049; /* لون الزر عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تسجيل الدخول إلى جماعة العلوم</h1>
+    </header>
+    <main>
+        <section>
+            <form id="loginForm">
+                <label for="loginEmail">البريد الإلكتروني:</label>
+                <input type="email" id="loginEmail" required>
+
+                <label for="loginPassword">كلمة المرور:</label>
+                <input type="password" id="loginPassword" required>
+
+                <button type="submit">تسجيل الدخول</button>
+            </form>
+            <div id="loginMessage"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 جماعة العلوم</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").onsubmit = function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            // هنا يمكنك إضافة كود للتحقق من بيانات تسجيل الدخول
+
+            // إعادة توجيه المستخدم إلى الصفحة الرئيسية
+            window.location.href = "الصفحةالاساسية.html"; // تأكد من أن "الصفحةالاساسية.html" هو اسم ملف الصفحة الرئيسية
+        };
+    </script>
+</body>
+</html>
