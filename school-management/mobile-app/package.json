@@ -1,0 +1,17 @@
+{
+  "name": "school-management-mobile",
+  "version": "1.0.0",
+  "main": "App.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.1.17",
+    "@react-navigation/native-stack": "^6.9.26",
+    "axios": "^1.7.2",
+    "expo": "^51.0.18",
+    "react": "18.2.0",
+    "react-native": "0.74.3"
+  }
+}
